@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Telegram Store Mini App: клиентский путь без перезагрузок, FastAPI, SQLite, защищённый checkout, статусы доставки и 33 теста.">
+  <meta name="theme-color" content="#11120f">
+  <title>Telegram Store Mini App — Александр Халтурин</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=6">
+  <link rel="stylesheet" href="../project.css?v=6">
+  <script src="../app.js?v=6" defer></script>
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#content">Перейти к содержанию</a>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Вернуться на главную">
+        <span class="brand-mark" aria-hidden="true">AX</span>
+        <span class="brand-name">Александр <b>Халтурин</b></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="project-nav" data-menu-toggle>
+        <span class="sr-only">Открыть меню</span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="project-nav" aria-label="Навигация проекта" data-nav>
+        <a href="../index.html#projects">Все проекты</a>
+        <a class="nav-cta" href="../index.html#contact">Связаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="project-hero">
+      <div class="shell project-hero-inner">
+        <div>
+          <div class="breadcrumb">
+            <a href="../index.html">Главная</a><span>/</span><a href="../index.html#projects">Проекты</a><span>/</span><span>Telegram Store</span>
+          </div>
+          <p class="eyebrow eyebrow-dark">Продуктовый + backend кейс · local demo · август 2026</p>
+          <h1>Telegram Store<br>Mini App</h1>
+          <p class="project-hero-lead">Рабочий клиентский путь от выбора товара до отслеживания доставки — с мобильным интерфейсом без перезагрузок, FastAPI‑backend, защищённым checkout, историей заказов и воспроизводимой проверкой.</p>
+        </div>
+        <dl class="project-summary">
+          <div><dt>Проверка</dt><dd>33 tests passed</dd></div>
+          <div><dt>Backend</dt><dd>FastAPI + SQLite</dd></div>
+          <div><dt>Срез</dt><dd><code>47c069e</code> · Codex</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="project-body">
+      <div class="shell article-grid">
+        <aside class="article-nav" aria-label="Содержание страницы">
+          <p>На странице</p>
+          <a href="#task">Задача</a>
+          <a href="#role">Личный вклад</a>
+          <a href="#experience">Сценарий</a>
+          <a href="#architecture">Архитектура</a>
+          <a href="#resilience">Надёжность</a>
+          <a href="#quality">Проверка</a>
+          <a href="#limits">Границы</a>
+        </aside>
+
+        <div class="article-content">
+          <section class="article-section" id="task">
+            <p class="article-kicker">01 / Задача</p>
+            <h2>Собрать клиентский путь, который не разваливается после корзины</h2>
+            <p class="article-intro">Официальное приложение к диплому подтверждает исходную тему Telegram‑магазина. В 2026 году она превращена в локально запускаемую Mini App с реальными API, базой данных и тестами: пользователь может выбрать товар, оформить заказ и понять, что происходит дальше.</p>
+            <div class="scope-grid">
+              <article class="scope-item"><span>01</span><h3>Быстрый выбор</h3><p>Категории, цены, остатки и навигация помогают перейти от просмотра к покупке без лишних шагов.</p></article>
+              <article class="scope-item"><span>02</span><h3>Корзина без трения</h3><p>Количество меняется мгновенно, без перезагрузки страницы и потери контекста.</p></article>
+              <article class="scope-item"><span>03</span><h3>Защищённый заказ</h3><p>Повторная отправка не создаёт дубль, а состав и цены фиксируются в момент checkout.</p></article>
+              <article class="scope-item"><span>04</span><h3>Прозрачная доставка</h3><p>Номер заказа, понятные статусы и трек‑номер отвечают на вопрос пользователя «что дальше?».</p></article>
+            </div>
+          </section>
+
+          <section class="article-section" id="role">
+            <p class="article-kicker">02 / Роли</p>
+            <h2>Из замечаний к интерфейсу — в конкретные продуктовые требования</h2>
+            <p class="article-intro">Кейс показывает практическую продуктовую работу: увидеть разрыв в пользовательском сценарии, сформулировать изменения, проверить живую версию и принять результат. Техническая реализация при этом честно отделена от личного вклада.</p>
+            <div class="role-grid">
+              <article class="role-card role-human">
+                <span>Александр / product owner</span>
+                <h3>Разбор сценария и приёмка продукта</h3>
+                <p>Выявил ключевые проблемы первой версии: перезагрузку корзины, одностраничную структуру, непонятный профиль и отсутствие прозрачного пути заказа. Поставил требования к навигации, статусам и трекингу, затем проверил и принял живой интерфейс.</p>
+              </article>
+              <article class="role-card role-ai">
+                <span>Codex / implementation</span>
+                <h3>Код и инженерный контур</h3>
+                <p>Реализовал frontend и backend, схему SQLite, HMAC-проверку Telegram initData, идемпотентный checkout, тесты, документацию и Git-коммит <code>47c069e</code>.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="article-section" id="experience">
+            <p class="article-kicker">03 / Пользовательский сценарий</p>
+            <h2>Пользователь всегда понимает следующий шаг</h2>
+            <div class="process-flow" aria-label="Пользовательский сценарий магазина">
+              <div class="process-step"><b>01</b><strong>Каталог</strong><small>поиск и категории</small></div>
+              <div class="process-step"><b>02</b><strong>Корзина</strong><small>без reload</small></div>
+              <div class="process-step"><b>03</b><strong>Checkout</strong><small>один заказ</small></div>
+              <div class="process-step"><b>04</b><strong>Статусы</strong><small>сборка → отправка</small></div>
+              <div class="process-step"><b>05</b><strong>Трекинг</strong><small>номер отправления</small></div>
+            </div>
+            <div class="warning-panel">
+              <strong>Что изменилось после live‑review</strong>
+              <p>Первый вариант был одностраничной витриной и визуально перезагружался при работе с корзиной. После разбора сценарий пересобран как Mini App с нижней навигацией, отдельными экранами и мгновенным обновлением состояния.</p>
+            </div>
+          </section>
+
+          <section class="article-section" id="architecture">
+            <p class="article-kicker">04 / Архитектура</p>
+            <h2>Backend отражает процесс магазина, а не набор endpoint</h2>
+            <div class="process-flow" aria-label="Архитектура Telegram Store Mini App">
+              <div class="process-step"><b>01</b><strong>Mini App</strong><small>HTML / CSS / JS</small></div>
+              <div class="process-step"><b>02</b><strong>FastAPI</strong><small>HTTP-контракт</small></div>
+              <div class="process-step"><b>03</b><strong>Service</strong><small>use cases</small></div>
+              <div class="process-step"><b>04</b><strong>Repository</strong><small>транзакции</small></div>
+              <div class="process-step"><b>05</b><strong>SQLite</strong><small>migration v2</small></div>
+            </div>
+            <div class="scope-grid">
+              <article class="scope-item"><span>API</span><h3>Операции разделены</h3><p>Каталог, корзина, оформление, история и статусы имеют собственные контракты и зоны ответственности.</p></article>
+              <article class="scope-item"><span>DB</span><h3>История не меняется задним числом</h3><p>Название и цена фиксируются при покупке, даже если будущий каталог будет обновлён.</p></article>
+              <article class="scope-item"><span>TG</span><h3>Профилю нельзя просто поверить</h3><p>initData проходит HMAC‑валидацию до использования данных Telegram‑пользователя.</p></article>
+              <article class="scope-item"><span>UI</span><h3>Интерфейс реагирует сразу</h3><p>Состояние корзины меняется локально, без перезагрузки страницы и повторного входа в сценарий.</p></article>
+            </div>
+          </section>
+
+          <section class="article-section" id="resilience">
+            <p class="article-kicker">05 / Надёжность</p>
+            <h2>Повторный клик не должен создавать второй заказ</h2>
+            <p class="article-intro">Критические сценарии закрыты на уровне backend, а не только интерфейса.</p>
+            <ul class="limits-list resilience-list">
+              <li><strong>Idempotency key.</strong> Повтор checkout возвращает уже созданный заказ для того же пользователя.</li>
+              <li><strong>Атомарная транзакция.</strong> Списание остатков и создание заказа проходят как единая операция.</li>
+              <li><strong>Переходы статусов.</strong> Заказ движется по разрешённой цепочке: получен → собирается → отправлен → доставлен.</li>
+              <li><strong>Конкурентный доступ.</strong> Операции checkout защищены блокировкой внутри процесса.</li>
+              <li><strong>Миграция данных.</strong> Схема v2 обновляется без ручного пересоздания рабочей базы.</li>
+            </ul>
+          </section>
+
+          <section class="article-section" id="quality">
+            <p class="article-kicker">06 / Проверка</p>
+            <h2>Критические сценарии закрыты до демонстрации</h2>
+            <div class="evidence-panel">
+              <div class="evidence-score"><strong>33</strong><span>tests passed</span></div>
+              <ul class="evidence-list">
+                <li>Checkout, остатки и snapshots</li>
+                <li>Повторный запрос и изоляция пользователей</li>
+                <li>HMAC-проверка Telegram initData</li>
+                <li>Разрешённые и запрещённые переходы статусов</li>
+                <li>Миграция SQLite до schema v2</li>
+                <li>Desktop и mobile browser QA</li>
+              </ul>
+            </div>
+            <div class="warning-panel">
+              <strong>Проверяемый публичный срез</strong>
+              <p><code>pytest: 33 passed</code>, Ruff без замечаний, <code>compileall</code> и <code>uv pip check</code> проходят. Git-коммит <code>47c069e</code> создан Codex 24 августа 2026 года.</p>
+            </div>
+            <a class="project-link" href="https://github.com/kotosrol/telegram-store-reconstruction" target="_blank" rel="noopener noreferrer">Открыть код и CI на GitHub <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <section class="article-section" id="limits">
+            <p class="article-kicker">07 / Следующий уровень</p>
+            <h2>Граница готовности и понятный план развития</h2>
+            <ul class="limits-list">
+              <li>Это реконструкция 2026 года, а не найденный исходный репозиторий аттестационной работы 2025 года.</li>
+              <li>Проект не развёрнут в production и пока не имеет публичного remote.</li>
+              <li>Реальные платежи, уведомления продавцу и API службы доставки не подключены.</li>
+              <li>Блокировка рассчитана на один процесс; для нескольких workers нужна внешняя координация или иной механизм БД.</li>
+              <li>Код и коммит созданы Codex; подтверждённый вклад Александра — постановка требований, продуктовые решения и живая приёмка.</li>
+              <li>Скан диплома и персональные реквизиты не публикуются.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <section class="back-section">
+      <div class="shell back-inner"><p>Следующий кейс</p><a href="cad-automation-pipeline.html">Pipeline генерации 2D-чертежей <span>→</span></a></div>
+    </section>
+  </main>
+</body>
+</html>

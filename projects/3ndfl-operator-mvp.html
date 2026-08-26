@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Контролируемая автоматизация подготовки 3-НДФЛ: локальные данные, fail-closed проверки, официальный контроль и 206 тестов.">
+  <meta name="theme-color" content="#15181d">
+  <title>Операторский MVP 3-НДФЛ — Александр Халтурин</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=6">
+  <link rel="stylesheet" href="../project.css?v=6">
+  <script src="../app.js?v=6" defer></script>
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#content">Перейти к содержанию</a>
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Вернуться на главную"><span class="brand-mark" aria-hidden="true">AX</span><span class="brand-name">Александр <b>Халтурин</b></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="project-nav" data-menu-toggle><span class="sr-only">Открыть меню</span><span></span><span></span></button>
+      <nav class="site-nav" id="project-nav" aria-label="Навигация проекта" data-nav><a href="../index.html#projects">Все проекты</a><a class="nav-cta" href="../index.html#contact">Связаться</a></nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="project-hero">
+      <div class="shell project-hero-inner">
+        <div>
+          <div class="breadcrumb"><a href="../index.html">Главная</a><span>/</span><a href="../index.html#projects">Проекты</a><span>/</span><span>3‑НДФЛ MVP</span></div>
+          <p class="eyebrow eyebrow-dark">Внутренний MVP · controlled pilot · 2026</p>
+          <h1>Контролируемая автоматизация подготовки 3‑НДФЛ</h1>
+          <p class="project-hero-lead">Рутинные операции с документами собраны в локальный управляемый поток: система структурирует данные, останавливается при противоречиях и готовит результат к обязательной проверке оператором в официальном ПО.</p>
+        </div>
+        <dl class="project-summary">
+          <div><dt>Статус</dt><dd>MVP / controlled pilot</dd></div>
+          <div><dt>Область</dt><dd>2025: зарплата + социальные вычеты</dd></div>
+          <div><dt>Проверка</dt><dd>206 тестов на 09.08.2026</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="project-body">
+      <div class="shell article-grid">
+        <aside class="article-nav" aria-label="Содержание страницы"><p>На странице</p><a href="#task">Задача</a><a href="#role">Личный вклад</a><a href="#flow">Поток</a><a href="#result">Результат</a><a href="#limits">Границы</a></aside>
+        <div class="article-content">
+          <section class="article-section" id="task">
+            <p class="article-kicker">01 / Задача</p>
+            <h2>Сократить рутину, не отдавая системе налоговое решение</h2>
+            <p class="article-intro">Для поддерживаемого сценария — доходы по найму за 2025 год и социальные вычеты — повторяющиеся действия автоматизированы, а неопределённость не скрывается. При неполных или противоречивых данных процесс останавливается и возвращает вопрос оператору.</p>
+            <div class="scope-grid">
+              <article class="scope-item"><span>01</span><h3>Данные остаются локально</h3><p>Клиентские документы не уходят в публичный или облачный контур проекта.</p></article>
+              <article class="scope-item"><span>02</span><h3>Сомнение видно сразу</h3><p>Неизвестный сценарий останавливается и не маскируется под успешный результат.</p></article>
+              <article class="scope-item"><span>03</span><h3>Результат проверяем</h3><p>Сформированный файл открывается и проверяется в официальном приложении ФНС.</p></article>
+              <article class="scope-item"><span>04</span><h3>Решение остаётся за человеком</h3><p>Оператор принимает финальное решение и определяет дальнейшие действия.</p></article>
+            </div>
+          </section>
+
+          <section class="article-section" id="role">
+            <p class="article-kicker">02 / Личный вклад</p>
+            <h2>Предметные риски заданы до реализации</h2>
+            <p class="article-intro">Сначала определены поддерживаемый сценарий, privacy‑границы, условия остановки и способ финальной проверки. Затем под эти правила собран AI‑assisted технический контур.</p>
+            <div class="role-grid">
+              <article class="role-card role-human"><span>Александр / domain owner</span><h3>Правила, границы и приёмка</h3><p>Задал предметный сценарий, правила fail‑closed и конфиденциальности; проверил реальные результаты в официальном приложении.</p></article>
+              <article class="role-card role-ai"><span>Codex / implementation tool</span><h3>Реализация и тестовый контур</h3><p>Собрал значительную часть кодовой базы, документацию, автоматические проверки и воспроизводимые материалы для продолжения работы.</p></article>
+            </div>
+          </section>
+
+          <section class="article-section" id="flow">
+            <p class="article-kicker">03 / Контролируемый поток</p>
+            <h2>Неясные данные останавливают процесс, а не портят результат</h2>
+            <div class="process-flow" aria-label="Поток обработки декларации">
+              <div class="process-step"><b>01</b><strong>Документы</strong><small>Локальный входной комплект</small></div>
+              <div class="process-step"><b>02</b><strong>Извлечение</strong><small>Только поддерживаемые поля</small></div>
+              <div class="process-step"><b>03</b><strong>Валидация</strong><small>Fail‑closed правила</small></div>
+              <div class="process-step"><b>04</b><strong>Файл .de5</strong><small>Формирование результата</small></div>
+              <div class="process-step"><b>05</b><strong>Human review</strong><small>Официальное ПО ФНС</small></div>
+            </div>
+          </section>
+
+          <section class="article-section" id="result">
+            <p class="article-kicker">04 / Наблюдаемый результат</p>
+            <h2>206 тестов и два результата, проверенных вручную</h2>
+            <div class="evidence-panel">
+              <div class="evidence-score"><strong>206</strong><span>тестов пройдено</span></div>
+              <ul class="evidence-list"><li>Два реальных результата вручную проверены владельцем процесса</li><li>Файлы открывались в официальном приложении ФНС</li><li>Область поддержки зафиксирована в handoff и документации</li><li>Реальные клиентские данные остаются в закрытом контуре</li><li>Проверка повторно запущена 09.08.2026</li></ul>
+            </div>
+          </section>
+
+          <section class="article-section" id="limits">
+            <p class="article-kicker">05 / Следующий уровень</p>
+            <h2>Граница пилота и условия расширения</h2>
+            <ul class="limits-list"><li>Production‑готовность и автономная работа без Codex не подтверждены.</li><li>Нет серии из пяти или двадцати подряд реальных успешных кейсов.</li><li>Не поддерживаются все налоговые сценарии и виды документов.</li><li>Нет автоматической подачи декларации и гарантии безошибочности.</li><li>Клиентские имена, суммы и исходные файлы не публикуются.</li></ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <section class="back-section"><div class="shell back-inner"><p>Вернуться к инженерному проекту</p><a href="power-supply-diploma.html">Электроснабжение жилого комплекса <span>→</span></a></div></section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">Знак Александра Халтурина</title>
+  <desc id="desc">Монограмма АХ, собранная как электрическая схема</desc>
+  <rect width="48" height="48" rx="14" fill="#15181d"/>
+  <path d="M11 34 20.5 13h3L33 34M15 27h14" fill="none" stroke="#f5f1e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M31 14v20M31 24h7" fill="none" stroke="#6f87ff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="38" cy="24" r="2.5" fill="#ffb55d"/>
+</svg>
+
