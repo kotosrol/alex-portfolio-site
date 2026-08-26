@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <a href="https://kotosrol.github.io/alex-portfolio-site/"><img alt="Live site" src="https://img.shields.io/badge/OPEN-LIVE_SITE-d8ff45?labelColor=111318"></a>
   <a href="https://github.com/kotosrol/alex-portfolio-site/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/kotosrol/alex-portfolio-site/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="Pages" src="https://img.shields.io/badge/static-no_runtime_dependencies-d8ff45?labelColor=111318">
   <img alt="Responsive" src="https://img.shields.io/badge/responsive-390→1440-57d8ff?labelColor=111318">
@@ -16,6 +17,8 @@
 ![Portfolio desktop preview](assets/portfolio-desktop.png)
 
 ## Задача сайта
+
+**Live:** https://kotosrol.github.io/alex-portfolio-site/
 
 Не перечислять технологии, а показать работодателю полный рабочий контур:
 
@@ -94,4 +97,3 @@ python -m http.server 4173
 ## Граница публикации
 
 Контактные данные будут добавлены отдельным обновлением. В репозитории нет сканов дипломов, номеров документов, клиентских данных, cookies, токенов и исходных материалов закрытых проектов.
-
