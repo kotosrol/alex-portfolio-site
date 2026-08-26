@@ -33,7 +33,7 @@ for (const relativeFile of htmlFiles) {
 
 const main = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 for (const required of [
-  'Автоматизирую процессы',
+  'Превращаю ручные процессы',
   'Разобраться вместе с пользователями',
   'Telegram Store Reconstruction',
   '2D CAD Automation Pipeline',
@@ -48,4 +48,3 @@ if (failures.length) {
 }
 
 console.log(`OK: ${htmlFiles.length} pages and their local references verified`);
-

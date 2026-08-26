@@ -1,9 +1,13 @@
 # Alexander Khalturin — Portfolio Site
 
 <p align="center">
-  <strong>Junior Python Developer / Automation Engineer</strong><br>
+  <strong>AI Automation Specialist / Junior Python Developer</strong><br>
   Персональный сайт о проверяемых Python, backend и automation‑проектах.
 </p>
+
+**Контакты:** [Telegram @kotosrol](https://t.me/kotosrol) · [krixkotosrol@gmail.com](mailto:krixkotosrol@gmail.com) · Санкт‑Петербург · полная занятость · 5/2
+
+**PDF‑резюме:** [AI‑автоматизация](resume/alexander-khalturin-ai-automation.pdf) · [Python backend](resume/alexander-khalturin-python-backend.pdf) · [2D CAD automation](resume/alexander-khalturin-cad-automation.pdf)
 
 <p align="center">
   <a href="https://kotosrol.github.io/alex-portfolio-site/"><img alt="Live site" src="https://img.shields.io/badge/OPEN-LIVE_SITE-d8ff45?labelColor=111318"></a>
@@ -96,4 +100,4 @@ python -m http.server 4173
 
 ## Граница публикации
 
-Контактные данные будут добавлены отдельным обновлением. В репозитории нет сканов дипломов, номеров документов, клиентских данных, cookies, токенов и исходных материалов закрытых проектов.
+Публичные контакты подтверждены владельцем. В репозитории нет сканов дипломов, номеров документов, клиентских данных, cookies, токенов и исходных материалов закрытых проектов.
