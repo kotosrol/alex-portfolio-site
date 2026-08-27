@@ -33,6 +33,7 @@ for (const relativeFile of htmlFiles) {
 
 const main = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 for (const required of [
+  'Разработчик систем автоматизации · Python / AI',
   'Превращаю ручные процессы',
   'Разобраться вместе с пользователями',
   'Telegram Store Reconstruction',
@@ -40,6 +41,10 @@ for (const required of [
   'Операторский MVP подготовки 3‑НДФЛ',
 ]) {
   if (!main.includes(required)) failures.push(`index.html: missing required copy: ${required}`);
+}
+
+if (!main.includes('resume/alexander-khalturin-automation-developer.pdf')) {
+  failures.push('index.html: missing universal PDF resume link');
 }
 
 if (failures.length) {

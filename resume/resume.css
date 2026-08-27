@@ -62,9 +62,7 @@ p, h1, h2, h3, ul, dl, dd { margin: 0; }
   border-radius: 50%;
 }
 
-.variant-ai { --variant: var(--acid); }
-.variant-backend { --variant: var(--cyan); }
-.variant-cad { --variant: var(--orange); }
+.variant-universal { --variant: var(--acid); }
 
 .resume-head {
   position: relative;
