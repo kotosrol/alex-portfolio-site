@@ -58,5 +58,42 @@
 }
 
 @media (max-width: 720px) {
-  .project-hero { padding: 130px 0 75px; }.project-hero h1 { font-size: clamp(51px, 15vw, 76px); }.project-hero-lead { font-size: 14px; }.project-summary { grid-template-columns: 1fr; }.project-summary div + div { padding-left: 0; border-left: 0; }.project-body { padding: 70px 0 90px; }.article-section { padding-bottom: 70px; }.article-section + .article-section { padding-top: 68px; }.article-section h2 { font-size: clamp(40px, 12vw, 58px); }.article-intro { font-size: 14px; }.scope-grid, .role-grid { grid-template-columns: 1fr; }.scope-item { min-height: 190px; }.role-card h3 { margin-top: 45px; }.process-flow { grid-template-columns: 1fr; }.process-flow::before { left: 28px; right: auto; top: 7%; bottom: 7%; width: 1px; height: auto; }.process-step { min-height: 115px; padding-left: 50px; }.evidence-panel { grid-template-columns: 1fr; }.evidence-score { min-height: 220px; }.warning-panel { padding-left: 25px; padding-top: 70px; }.warning-panel::before { left: 25px; }.back-inner { min-height: 230px; }.back-inner a { font-size: 40px; }
+  .project-page .brand img { width: 42px; height: 42px; border-radius: 12px; }
+  .project-hero { padding: calc(112px + env(safe-area-inset-top)) 0 68px; }
+  .project-hero::after { width: 420px; height: 420px; right: -240px; top: -180px; }
+  .project-hero h1 { max-width: 100%; font-size: clamp(39px, 10vw, 48px); line-height: .98; letter-spacing: -.025em; text-wrap: pretty; overflow-wrap: break-word; }
+  .breadcrumb { flex-wrap: nowrap; gap: 7px; max-width: 100%; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+  .breadcrumb::-webkit-scrollbar { display: none; }
+  .breadcrumb a { min-height: 44px; display: inline-flex; align-items: center; }
+  .project-hero-lead { margin-top: 25px; font-size: 14px; line-height: 1.62; }
+  .project-summary { grid-template-columns: 1fr; }
+  .project-summary div + div { padding-left: 0; border-left: 0; }
+  .project-body { padding: 66px 0 84px; }
+  .article-nav { gap: 2px 12px; padding-block: 12px; }
+  .article-nav a { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; }
+  .article-section { padding-bottom: 64px; }
+  .article-section + .article-section { padding-top: 62px; }
+  .article-section h2 { font-size: clamp(36px, 10vw, 46px); line-height: 1; letter-spacing: -.02em; text-wrap: pretty; }
+  .article-intro { margin-bottom: 32px; font-size: 14px; line-height: 1.65; }
+  .scope-grid, .role-grid { grid-template-columns: 1fr; }
+  .scope-item { min-height: 0; padding: 22px; }
+  .scope-item h3 { margin-top: 34px; }
+  .role-card { min-height: 240px; padding: 24px; }
+  .role-card h3 { margin-top: 42px; }
+  .process-flow { grid-template-columns: 1fr; }
+  .process-flow::before { left: 28px; right: auto; top: 7%; bottom: 7%; width: 1px; height: auto; }
+  .process-step { min-height: 108px; padding-left: 50px; }
+  .evidence-panel { grid-template-columns: 1fr; }
+  .evidence-score { min-height: 165px; }
+  .evidence-score strong { font-size: 70px; }
+  .warning-panel { padding-left: 25px; padding-top: 70px; }
+  .warning-panel::before { left: 25px; }
+  .back-inner { min-height: 215px; padding-bottom: env(safe-area-inset-bottom); }
+  .back-inner a { font-size: 35px; line-height: 1.02; }
+}
+
+@media (max-width: 360px) {
+  .project-hero h1 { font-size: 36px; }
+  .article-section h2 { font-size: 34px; }
+  .back-inner a { font-size: 32px; }
 }
